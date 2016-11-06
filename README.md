@@ -11,25 +11,27 @@ For working example, see http://mooz.github.com/org-js/editor/.
 Installation
 ------------
 
-    npm install -S org
+    (WIP)
 
 Simple example of org -> HTML conversion
 ----------------------------------------
 
 ```javascript
-var org = require("org");
+const org = require("org");
 
-var parser = new org.Parser();
-var orgDocument = parser.parse(orgCode);
-var orgHTMLDocument = orgDocument.convert(org.ConverterHTML, {
+const orgCode = '* A Big Title';
+
+const parser = new org.Parser();
+const orgDoc = parser.parse(orgCode);
+const orgHTMLDoc = orgDoc.convert(org.Converter.html, {
   headerOffset: 1,
   exportFromLineNumber: false,
   suppressSubScriptHandling: false,
   suppressAutoLink: false
 });
 
-console.dir(orgHTMLDocument); // => { title, contentHTML, tocHTML, toc }
-console.log(orgHTMLDocument.toString()) // => Rendered HTML
+console.dir(orgHTMLDoc); // => { title, contentHTML, tocHTML, toc }
+console.log(orgHTMLDoc.toString()) // => Rendered HTML
 ```
 
 Writing yet another converter
