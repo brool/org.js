@@ -1,0 +1,135 @@
+html, body {
+  height   : 100%;
+  margin   : 0;
+  padding  : 0;
+  overflow : hidden;
+}
+
+body {
+  font-family: Menlo, Monaco,
+               'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+               'Courier New',
+               monospace, serif;
+}
+
+/* container */
+#container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin  : 0;
+  padding : 0;
+}
+
+#container-input,
+#container-result {
+  flex: 0 1 auto;
+  width: 50%;
+}
+
+#input,
+#result {
+  width : 100%;
+  height : 100%;
+  border: none;
+  overflow: scroll;
+
+  padding: 20px;
+}
+
+#input {
+  background: rgb(255, 255, 242);
+  color: rgb(0, 0, 0);
+
+  resize: none;
+}
+
+#result {
+  background: rgb(224, 227, 218);
+  color: rgb(0, 0, 0);
+}
+
+/* document */
+a {
+  text-decoration : none;
+  color           : #278ac7;
+}
+
+a, a:link, a:visited {
+}
+
+a:hover, a:active {
+  text-decoration : none;
+}
+
+span.section-number::after {
+  content: " ";
+}
+
+#result h1 {
+  font-size     : 1.5em;
+  border-bottom : 1px solid rgb(86, 98, 113);
+  font-weight   : bold;
+}
+
+#result h2 {
+  font-size     : 170%;
+  border-bottom : 1px dashed rgb(86, 98, 113);
+  padding       : 3px 10px;
+  font-weight   : bold;
+}
+
+#result h3 {
+  font-size     : 150%;
+  padding       : 3px 10px;
+  font-weight   : bold;
+}
+
+#result h4 {
+  font-size     : 130%;
+  padding       : 3px 10px;
+  font-weight   : bold;
+}
+
+#result pre, #result code {
+  border           : 1px solid rgb(86, 98, 113);
+}
+
+#result p {
+  padding : 4px 7px;
+  margin  : 0;
+}
+
+#result pre {
+  padding : 4px 7px;
+  margin  : 8px;
+}
+
+#result code {
+  margin-left   : 3px;
+  margin-right  : 3px;
+  padding-left  : 3px;
+  padding-right : 3px;
+}
+
+/* table */
+#result table {
+  background      : #fff;
+  margin          : 10px auto;
+  width           : 80%;
+  border-collapse : collapse;
+  text-align      : left;
+}
+
+#result th {
+  font-weight   : bold;
+  color         : #039;
+  padding       : 6px 8px;
+  border-bottom : 2px solid #6678b1;
+}
+
+#result td {
+  border-bottom : 1px solid #ccc;
+  color         : #212142;
+  padding       : 6px 8px;
+}
