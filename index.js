@@ -1,9 +1,9 @@
 'use strict';
 
-const Parser = require('./lib/parser.js');
-const ConverterHTML = require('./lib/converter/html.js');
+const Parser = require('./lib/parser');
+const Converter = require('./lib/converter');
 
 module.exports = {
   Parser,
-  ConverterHTML
+  Converter
 };
