@@ -11,7 +11,7 @@ For working example, see http://mooz.github.com/org-js/editor/.
 Installation
 ------------
 
-    npm install org
+    npm install -S org
 
 Simple example of org -> HTML conversion
 ----------------------------------------
