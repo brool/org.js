@@ -22,7 +22,6 @@
     "url": "git://github.com/m31271n/org.js.git"
   },
   "devDependencies": {
-    "rollup": "^0.36.3",
-    "uglify-js": "^2.7.4"
+    "rollup": "^0.36.3"
   }
 }
