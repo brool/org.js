@@ -1,7 +1,3 @@
-'use strict';
-
-const Org = require('../../');
-
 function load() {
   var inputEl = document.getElementById('input');
   var resultEl = document.getElementById('result');
