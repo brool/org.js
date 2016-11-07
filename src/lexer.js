@@ -176,4 +176,4 @@ Lexer.tokens = {};
   Lexer.tokens[tokenName] = i;
 });
 
-module.exports = Lexer;
+export default Lexer;

@@ -1,6 +1,6 @@
-const Stream = require("./stream");
-const Lexer  = require("./lexer");
-const Node   = require("./node");
+import Stream from './stream';
+import Lexer from './lexer';
+import Node from './node';
 
 function Parser() {
   this.inlineParser = new InlineParser();
@@ -672,4 +672,4 @@ InlineParser.prototype = {
   }
 };
 
-module.exports = Parser;
+export default Parser;

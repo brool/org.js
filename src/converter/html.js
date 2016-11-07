@@ -1,5 +1,5 @@
-const Converter = require("./converter");
-const Node = require("../node");
+import Converter from './converter';
+import Node from '../node';
 
 function ConverterHTML(orgDocument, exportOptions) {
   this.initialize(orgDocument, exportOptions);
@@ -405,4 +405,4 @@ ConverterHTML.prototype = {
   }
 };
 
-module.exports = ConverterHTML;
+export default ConverterHTML;

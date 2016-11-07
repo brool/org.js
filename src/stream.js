@@ -16,4 +16,4 @@ Stream.prototype.hasNext = function () {
   return this.lineNumber < this.totalLines;
 };
 
-module.exports = Stream;
+export default Stream;

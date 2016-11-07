@@ -1,4 +1,4 @@
-const Node = require("../node");
+import Node from '../node';
 
 function Converter() {
 }
@@ -386,4 +386,4 @@ Converter.prototype = {
   ].join("|") + ")$", "i")
 };
 
-module.exports = Converter;
+export default Converter;

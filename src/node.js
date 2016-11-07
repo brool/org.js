@@ -8,6 +8,7 @@ function PrototypeNode(type, children) {
     }
   }
 }
+
 PrototypeNode.prototype = {
   previousSibling: null,
   parent: null,
@@ -94,4 +95,4 @@ Node.define("link", function (node, options) {
   node.src = options.src;
 });
 
-module.exports = Node;
+export default Node;
