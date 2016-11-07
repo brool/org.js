@@ -1,27 +1,24 @@
-org-js
-======
+# org.js
 
-Parser and converter for org-mode (<http://orgmode.org/>) notation written in JavaScript.
+Parser and converter for [org-mode](http://orgmode.org/) notation written in JavaScript.
 
-Interactive Editor
-------------------
+## Interactive Editor
+For working example, see `demo/editor`.
 
-For working example, see http://mooz.github.com/org-js/editor/.
+## Installation
 
-Installation
-------------
+```
+npm install -S org.js
+```
 
-    (WIP)
-
-Simple example of org -> HTML conversion
-----------------------------------------
+## Usage
+### org -> HTML
 
 ```javascript
 const org = require("org");
+const parser = new org.Parser();
 
 const orgCode = '* A Big Title';
-
-const parser = new org.Parser();
 const orgDoc = parser.parse(orgCode);
 const orgHTMLDoc = orgDoc.convert(org.Converter.html, {
   headerOffset: 1,
@@ -30,11 +27,16 @@ const orgHTMLDoc = orgDoc.convert(org.Converter.html, {
   suppressAutoLink: false
 });
 
-console.dir(orgHTMLDoc); // => { title, contentHTML, tocHTML, toc }
-console.log(orgHTMLDoc.toString()) // => Rendered HTML
+console.dir(orgHTMLDoc);  // { title, contentHTML, tocHTML, toc }
+console.log(orgHTMLDoc.toString())  // Rendered HTML
 ```
 
-Writing yet another converter
------------------------------
+## Expand
+### Writing a converter
+Read `src/converter/html.js`.
 
-See `lib/org/converter/html.js`.
+## Announcement
+* Original code is from [mooz/org-js](https://github.com/mooz/org-js).
+
+## License
+MIT
