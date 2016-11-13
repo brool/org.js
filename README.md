@@ -21,7 +21,6 @@ const parser = new org.Parser();
 const orgCode = '* A Big Title';
 const orgDoc = parser.parse(orgCode);
 const orgHTMLDoc = orgDoc.convert(org.Converter.html, {
-  headerOffset: 1,
   exportFromLineNumber: false,
   suppressSubScriptHandling: false,
   suppressAutoLink: false
