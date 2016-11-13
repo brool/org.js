@@ -10,20 +10,16 @@ ConverterHTML.prototype = {
   __proto__: Converter.prototype,
 
   convert: function () {
-    var title = this.orgDocument.title ? this.convertNode(this.orgDocument.title) : this.untitled;
-    var titleHTML = this.tag("h" + Math.max(Number(this.headerOffset), 1), title);
-    var contentHTML = this.convertNodes(this.orgDocument.nodes, true /* record headers */);
+    var contentHTML = this.convertNodes(this.orgDocument.nodes, true);
+
     var toc = this.computeToc(this.documentOptions["toc"]);
     var tocHTML = this.tocToHTML(toc);
 
     return {
-      title: title,
-      titleHTML: titleHTML,
-      contentHTML: contentHTML,
       tocHTML: tocHTML,
-      toc: toc,
+      contentHTML: contentHTML,
       toString: function () {
-        return titleHTML + tocHTML + "\n" + contentHTML;
+        return `${tocHTML}\n${contentHTML}`
       }
     };
   },
@@ -105,8 +101,7 @@ ConverterHTML.prototype = {
     if (taskStatus)
       headerAttributes["class"] = "task-status " + taskStatus;
 
-    return this.tag("h" + (this.headerOffset + node.level),
-                    childText, headerAttributes, auxData);
+    return this.tag(`h${node.level}`, childText, headerAttributes, auxData);
   },
 
   convertOrderedList: function (node, childText, auxData) {

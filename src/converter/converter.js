@@ -5,7 +5,6 @@ function Converter() {
 
 Converter.prototype = {
   exportOptions: {
-    headerOffset: 1,
     exportFromLineNumber: false,
     suppressSubScriptHandling: false,
     suppressAutoLink: false,
@@ -19,7 +18,6 @@ Converter.prototype = {
     htmlIdPrefix: null
   },
 
-  untitled: "Untitled",
   result: null,
 
   // TODO: Manage TODO lists
@@ -30,8 +28,6 @@ Converter.prototype = {
     this.exportOptions = exportOptions || {};
 
     this.headers = [];
-    this.headerOffset =
-      typeof this.exportOptions.headerOffset === "number" ? this.exportOptions.headerOffset : 1;
     this.sectionNumbers = [0];
   },
 
