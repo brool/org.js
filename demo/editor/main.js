@@ -11,13 +11,12 @@ function load() {
         translateSymbolArrow: true
       }).toString();
     } catch (e) {
-      return alert(e);
+      console.log(e);
     }
   }
 
   function render() {
     var org = inputEl.value;
-    console.log('somo' + org);
     renderHTML(org);
   }
 

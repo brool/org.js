@@ -1,6 +1,12 @@
 import Node from '../node';
 
-function Converter() {
+function Converter(orgDocument, exportOptions) {
+  this.orgDocument = orgDocument;
+  this.documentOptions = this.orgDocument.options || {};
+  this.exportOptions = exportOptions || {};
+
+  this.headers = [];
+  this.sectionNumbers = [0];
 }
 
 Converter.prototype = {
@@ -19,17 +25,6 @@ Converter.prototype = {
   },
 
   result: null,
-
-  // TODO: Manage TODO lists
-
-  initialize: function (orgDocument, exportOptions) {
-    this.orgDocument = orgDocument;
-    this.documentOptions = orgDocument.options || {};
-    this.exportOptions = exportOptions || {};
-
-    this.headers = [];
-    this.sectionNumbers = [0];
-  },
 
   createTocItem: function (headerNode, parentTocs) {
     var childTocs = [];
