@@ -13,7 +13,7 @@
   "author": "m31271n",
   "license": "MIT",
   "main": "dist/org.cjs.js",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "directories": {
     "test": "./tests"
   },
